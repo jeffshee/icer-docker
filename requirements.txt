@@ -1,0 +1,22 @@
+# To ensure app dependencies are ported from your virtual environment/host machine into your container, run 'pip freeze > requirements.txt' in the terminal to overwrite this file
+face-recognition
+inaSpeechSegmenter
+Keras
+librosa
+matplotlib
+mecab
+networkx
+numpy
+pandas
+pandasgui
+Pillow
+pydub
+pygraphviz
+PyQt5
+pyqtgraph
+PyQtWebEngine
+pyvis
+scikit-learn
+SpeechRecognition
+tensorflow
+tqdm
