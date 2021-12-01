@@ -7,6 +7,7 @@ matplotlib
 mecab
 networkx
 numpy
+opencv-python-headless
 pandas
 pandasgui
 Pillow
