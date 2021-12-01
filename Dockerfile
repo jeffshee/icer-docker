@@ -8,13 +8,16 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 ENV TZ=Asia/Tokyo
-RUN sudo -i
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN sudo sh -c "ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone"
 
 # Install dependencies
 RUN sudo apt-get update 
+RUN sudo apt-get install build-essential -y
+RUN sudo apt-get install cmake -y
 RUN sudo apt-get install mecab libmecab-dev -y
 RUN sudo apt-get install graphviz libgraphviz-dev -y
+RUN curl -O https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/libcudnn8_8.1.1.33-1+cuda11.2_amd64.deb
+RUN sudo dpkg -i ./libcudnn8_8.1.1.33-1+cuda11.2_amd64.deb
 
 # Install pip requirements
 COPY requirements.txt .
