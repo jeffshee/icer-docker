@@ -24,5 +24,8 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-### NVIDIA  
+### NVIDIA
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
+
+### Developing inside the container
+https://code.visualstudio.com/docs/remote/containers

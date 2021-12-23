@@ -20,9 +20,11 @@ RUN sudo apt-get install build-essential -y
 RUN sudo apt-get install cmake -y
 RUN sudo apt-get install mecab libmecab-dev -y
 RUN sudo apt-get install graphviz libgraphviz-dev -y
+RUN sudo apt-get install ffmpeg -y
+RUN sudo apt-get install gcc-8 -y
 
-# Install libcudnn8
-RUN sudo apt-get install libcudnn8 -y
+# Install libcudnn8, nvidia-cuda-toolkit
+RUN sudo apt-get install libcudnn8 nvidia-cuda-toolkit -y
 # RUN curl -O https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/libcudnn8_8.1.1.33-1+cuda11.2_amd64.deb
 # RUN sudo dpkg -i ./libcudnn8_8.1.1.33-1+cuda11.2_amd64.deb
 
