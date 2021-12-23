@@ -1,6 +1,6 @@
 ## ICER-docker
 
-Docker installation (Ubuntu)
+### Docker installation (Ubuntu)
 ```
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg lsb-release -y
@@ -17,12 +17,12 @@ sudo systemctl enable docker
 sudo docker run hello-world
 ```
 
-Manage Docker as a non-root user
+### Manage Docker as a non-root user
 ```
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-NVIDIA
+### NVIDIA  
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
